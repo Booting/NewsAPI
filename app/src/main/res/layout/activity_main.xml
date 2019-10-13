@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorBgSelected">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ToolBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <com.viewpagerindicator.UnderlinePageIndicator
+        android:id="@+id/underlinePageIndicator"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="4dp"/>
+    <LinearLayout android:id="@+id/linMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/underlinePageIndicator"
+        android:weightSum="2">
+        <Button android:id="@+id/btnRecent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorSelected"
+            android:background="@color/colorBgSelected"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:text="Business" />
+        <Button android:id="@+id/btnPopular"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorUnselected"
+            android:background="@color/colorBgUnselected"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:text="Entertainment" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linMenu"
+        android:background="@color/colorBgSelected">
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

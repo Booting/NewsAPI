@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">News API</string>
+
+    // FONT
+    <string name="font_lato_heavy">fontLatoHeavy</string>
+    <string name="font_lato_regular">fontLatoRegular</string>
+</resources>
